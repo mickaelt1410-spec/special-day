@@ -1,0 +1,344 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .screen {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease;
+            z-index: 10;
+            padding: 20px;
+        }
+        
+        #homeScreen {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+        
+        #celebrationScreen {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        #thankYouScreen {
+            opacity: 0;
+            pointer-events: none;
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+       .thank-you-message{
+           color : aqua;
+       }
+        
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: orange;
+            line-height: 1.2;
+            position: absolute;
+            top: 5px;
+        }
+        
+        .animated-name {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin: 15px 0;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            background: linear-gradient(45deg, #ffeb3b, #ff9800, #e91e63);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: nameAnimation 3s ease-in-out infinite;
+        }
+        
+        @keyframes nameAnimation {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+                text-shadow: 0 0 20px #ff0080, 0 0 30px #ff0080;
+            }
+            25% {
+                transform: scale(1.1) rotate(1deg);
+                text-shadow: 0 0 20px #ff8c00, 0 0 30px #ff8c00;
+            }
+            50% {
+                transform: scale(1.15) rotate(-1deg);
+                text-shadow: 0 0 20px #40e0d0, 0 0 30px #40e0d0;
+            }
+            75% {
+                transform: scale(1.1) rotate(1deg);
+                text-shadow: 0 0 20px #ff0080, 0 0 30px #ff0080;
+            }
+        }
+        
+        #countdown {
+            font-size: clamp(4rem, 20vw, 10rem);
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+            height: clamp(100px, 30vh, 200px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: lightgreen;
+        }
+        
+        button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: clamp(1rem, 4vw, 1.2rem);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            margin-top: 15px;
+            min-width: 200px;
+        }
+        
+        button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        #fireworksCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            max-width: 1200px;
+            padding: 10px;
+        }
+        
+        .birthday-info {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-weight: bold;
+            font-style: italic;
+            color : aqua;
+            margin: 10px 0;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            padding: 0 15px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255,255,255,0.5);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 30px rgba(255,255,255,0.6);
+            }
+        }
+        
+        .wishes-gallery {
+            width: 100%;
+            max-width: 800px;
+            height: clamp(80px, 15vh, 120px);
+            margin: 15px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .wishes-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s ease;
+        }
+        
+        .wish {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            font-weight: bold;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 0 15px;
+            text-align: center;
+        }
+        
+        .photo-gallery {
+            width: 100%;
+            max-width: 800px;
+            height: clamp(250px, 40vh, 400px);
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+            border: 4px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .photo-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s ease;
+        }
+        
+        .photo {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 16px;
+        }
+        
+        .gallery-controls {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            z-index: 5;
+        }
+        
+        .gallery-btn {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-btn.active {
+            background: white;
+            transform: scale(1.3);
+        }
+    
+        
+        .thank-you-message {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin: 20px 0;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .signature {
+            position: absolute;
+            top: -5px;
+            right: 20px;
+            font-size: 1.2rem;
+            opacity: 0.7;
+            font-style: italic;
+        }
+        
+        .mobile-warning {
+            display: none;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .content-container {
+                gap: 5px;
+            }
+            
+            .mobile-warning {
+                display: block;
+            }
+            
+            button {
+                min-width: 180px;
+                padding: 10px 25px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .screen {
+                padding: 15px;
+            }
+            
+            .photo-gallery {
+                height: 200px;
+            }
+            
+            .wishes-gallery {
+                height: 70px;
+            }
+            
+            .gallery-controls {
+                bottom: 10px;
+            }
+            
+            .signature {
+                bottom: 15px;
+                right: 15px;
+                font-size: 1rem;
+                font-weight: bold;
+                color: orange;
+            }
+        }
+        
+        @media (max-height: 600px) {
+            .photo-gallery {
+                height: 200px;
+            }
+            
+            .wishes-gallery {
+                height: 60px;
+            }
+            
+            .birthday-info {
+                font-size: 1.2rem;
+            }
+        }
+    
+    #birth{
+        font-size: 18px;
+        font-weight: bold;
+        color: pink;
+    }
+   

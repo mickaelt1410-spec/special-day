@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyeux Anniversaire Miranda !</title>
+    <link rel="stylesheet" href= "style.css">
+</head>
+<body>
+    <!-- Écran d'accueil avec compte à rebours -->
+    <div id="homeScreen" class="screen">
+        <h1>Veuillez commencer !!😊</h1>
+        <div id="countdown"></div>
+        <button id="startBtn">Start</button>
+    </div>
+    
+    <!-- Écran de célébration -->
+    <div id="celebrationScreen" class="screen">
+        <div class="content-container">
+            <div id="birth">🎉 Joyeux Anniversaire ! 🎉</div>
+            <div class="animated-name">✨Jessy Miranda RAFALIMINO✨</div>
+            <div class="birthday-info">13 Novembre 2025</div>
+            
+            <!-- Galerie de souhaits -->
+            <div class="wishes-gallery">
+                <div class="wishes-container" id="wishesContainer">
+                    <!-- Les souhaits seront ajoutés dynamiquement -->
+                </div>
+            </div>
+            
+            <!-- Galerie de photos -->
+            <div class="photo-gallery">
+                <div class="photo-container" id="photoContainer">
+                    <!-- Les photos seront ajoutées dynamiquement -->
+                </div>
+                <div class="gallery-controls" id="galleryControls">
+                    <!-- Les contrôles seront ajoutés dynamiquement -->
+                </div>
+            </div>
+            
+            <button id="restartBtn">Recommencer</button>
+        </div>
+        <div class="signature">©Mimi_Web_2025</div>
+    </div>
+    
+    <!-- Écran de remerciement -->
+    <div id="thankYouScreen" class="screen">
+        <div class="content-container">
+            <div class="thank-you-message">🎂13 Novembre 2025 (21 ans) 🎂</div>
+            <p>Un immense merci pour avoir assister jusqu'à la fin !😉🥹</p>
+            <p>🥰Profite bien de ta journée 💖</p>
+            <button id="backToStartBtn">Retour au début</button>
+        </div>
+        <div class="signature">©Mimi_Web_2025</div>
+    </div>
+    
+    <!-- Canvas pour les feux d'artifice -->
+    <canvas id="fireworksCanvas"></canvas>
+
+    <!-- Audio caché -->
+    <audio id="birthdayAudio" preload="auto" style="display: none;">
+        <source src="/sdcard/VidMate/download/Happy_Birthday_Song_Popular!!!(48k).mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Sons d'explosion cachés avec URLs alternatives -->
+    <audio id="explosionSound1" preload="auto" style="display: none;">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-firework-explosion-3091.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="explosionSound2" preload="auto" style="display: none;">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-firework-explosion-with-echo-3092.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="explosionSound3" preload="auto" style="display: none;">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-firework-whistle-rising-3103.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="explosionSound4" preload="auto" style="display: none;">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-big-explosion-3100.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="mian.js"></script>
+</body>
+</html>
