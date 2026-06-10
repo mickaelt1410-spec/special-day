@@ -36,22 +36,20 @@
         
         // Liste des souhaits d'anniversaire
         const birthdayWishes = [
-    							   "🎊Je ne sais pas parlé mais voici quelques mots pour te souhaiter en ce jour si spécial: 💝 ",
+    							   "🎊 Voici quelques mots pour te souhaiter en ce jour si spécial: 💝 ",
             "🎂 Que tous tes souhaits se réalisent ! 🎂",
             "✨ Une journée remplie de bonheur et de succès ! ✨",
             "🌟 Qui t'apporte du joie et du santé ! 🌟",
-            "🎁 Plein de bonnes surprises t'attendent ! 🎁",
             "💫 Que chaque jour soit une nouvelle aventure ! 💫",
             "🥳 Profite de chaque instant précieux ! 🥳",
             "🎊 Que la chance te sourie toute l'année ! 🎊",
-            "🚀 Que tes projets prennent leur envol ! 🚀",
             "🌈 Que ton chemin soit coloré de bonheur ! 🌈",
             "👼Soit bénis 👼! et Soit heureuse pour toujours! 💖🥹😽"
         ];
         
         // URLs des photos (remplacez par vos propres URLs)
         const photoUrls = [
-            'img_0.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+            'https://www.facebook.com/mia.andria.52/posts/pfbid035H9BE8CqEzVk3GFWBTGe9bxGJfAh8dmkEaoRbqFTMFcCmXgyAmj4bt8knCV6qSzbl?from_xma_click=1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
             'img_1.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
             'img_2.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
             'img_3.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
