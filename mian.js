@@ -49,7 +49,7 @@
         
         // URLs des photos (remplacez par vos propres URLs)
         const photoUrls = [
-            'https://www.facebook.com/mia.andria.52/posts/pfbid035H9BE8CqEzVk3GFWBTGe9bxGJfAh8dmkEaoRbqFTMFcCmXgyAmj4bt8knCV6qSzbl?from_xma_click=1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+            'img_0.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
             'img_1.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
             'img_2.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
             'img_3.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
