@@ -44,7 +44,8 @@
             "🥳 Profite de chaque instant précieux ! 🥳",
             "🎊 Que la chance te sourie toute l'année ! 🎊",
             "🌈 Que ton chemin soit coloré de bonheur ! 🌈",
-            "👼Soit bénis 👼! et Soit heureuse pour toujours! 💖🥹😽"
+            "👼Soit bénis 👼! et Soit heureuse pour toujours! 💖🥹😽", 
+            "💕 Mirary soa e! 😼😽 "
         ];
         
         // URLs des photos (remplacez par vos propres URLs)
